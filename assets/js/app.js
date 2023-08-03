@@ -124,13 +124,14 @@ const controls = {
     position: "bottomright",
     flyTo: false,
     keepCurrentZoomLevel: true,
+    showCompass: true,
     circleStyle: {
       interactive: false
     },
     markerStyle: {
       interactive: true
     },
-    metric: false,
+    metric: true,
     strings: {
       title: "My location",
       popup: (options) => {
