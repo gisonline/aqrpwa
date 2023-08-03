@@ -135,7 +135,7 @@ const controls = {
       title: "My location",
       popup: (options) => {
         const loc = controls.locateCtrl._marker.getLatLng();
-        return `<div style="text-align: center;">You are within ${Number(options.distance).toLocaleString()} ${options.unit}<br>from <strong>${loc.lat.toFixed(6)}</strong>, <strong>${loc.lng.toFixed(6)}</strong></div>`;
+        return `<div style="text-align: center;">شما در محدوده ${Number(options.distance).toLocaleString()} ${options.unit}<br>از <strong>${loc.lat.toFixed(6)}</strong>, <strong>${loc.lng.toFixed(6)}</strong></div>`;
       }
     },
     locateOptions: {
