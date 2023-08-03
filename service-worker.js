@@ -25,7 +25,7 @@ workbox.precaching.precacheAndRoute([
   {url: 'assets/vendor/leaflet-1.9.4/images/marker-icon-2x.png', revision: '10.27.22.2'},
   {url: 'assets/vendor/leaflet-1.9.4/images/marker-shadow.png', revision: '10.27.22.2'},
   {url: 'assets/vendor/leaflet-1.9.4/leaflet.css', revision: '10.27.22.2'},
-  {url: 'assets/vendor/leaflet-1.9.4/leaflet.js', revision: '10.27.22.2'},
+//  {url: 'assets/vendor/leaflet-1.9.4/leaflet.js', revision: '10.27.22.2'},
   {url: 'assets/vendor/leaflet-locatecontrol-0.76.1/L.Control.Locate.min.css', revision: '05.16.22.2س'},
   {url: 'assets/vendor/leaflet-locatecontrol-0.76.1/L.Control.Locate.min.js', revision: '05.16.22.2'},
   {url: 'assets/vendor/leaflet-mbtiles/Leaflet.TileLayer.MBTiles.js', revision: '09.09.20.1'},
