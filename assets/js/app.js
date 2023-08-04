@@ -129,7 +129,7 @@ L.Control.menuCommand = L.Control.extend({
         return controlDiv;
     }
 });
-
+alert('ok')
 L.control.menuCommand = function (options) {
     return new L.Control.menuCommand(options);
 };
