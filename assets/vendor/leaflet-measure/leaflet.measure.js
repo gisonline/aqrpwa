@@ -48,8 +48,8 @@
             this._link.href = "#";
 
             if (this.options.title) {
-//                var title = L.DomUtil.create("h3", "", this._contents);
-//                title.innerText = this.options.title;
+                var title = L.DomUtil.create("h3", "", this._contents);
+                title.innerText = this.options.title;
             }
 
             this._startAreaMeasure();
@@ -70,6 +70,7 @@
             L.DomEvent.disableClickPropagation(ele_link_area);
             L.DomEvent.on(ele_link_area, "click", this._enableMeasureArea, this);
         },
+        //wapco
         _startAreaMeasure: function () {
 //            var ele_ul = L.DomUtil.create("ul", "leaflet-measure-actions", this._contents);
 //            var ele_li = L.DomUtil.create("li", "leaflet-measure-action", ele_ul);
@@ -88,12 +89,14 @@
         },
         _initLayout: function () {
             this._buildContainer();
+            return;
             L.DomEvent.disableClickPropagation(this._container);
             L.DomEvent.disableScrollPropagation(this._container);
             if (this.options.collapsed) {
                 L.DomEvent.on(
                     this._container,
                     {
+//wapco
                         mouseenter: this._expand,
                         mouseleave: this._collapse,
                     },
