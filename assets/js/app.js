@@ -19,7 +19,7 @@ const map = L.map("map", {
         tolerance: 10
     })
 }).fitWorld();
-map.attributionControl.setPrefix(`<span id="status" style="color:${navigator.onLine ? "green" : "red"}">&#9673;</span> <a href="#" onclick="showInfo(); return false;">About</a>`);
+map.attributionControl.setPrefix(`<span id="status" style="color:${navigator.onLine ? "green" : "red"}">&#9673;</span> <a href="#" onclick="showInfo(); return false;">درباره</a>`);
 
 map.once("locationfound", (e) => {
     hideLoader();
@@ -46,7 +46,7 @@ const layers = {
         "Streets": L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.@2xpng", {
             maxNativeZoom: 18,
             maxZoom: map.getMaxZoom(),
-            attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, © <a href="https://carto.com/attribution">CARTO</a>',
+//            attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, © <a href="https://carto.com/attribution">CARTO</a>',
         }).addTo(map),
 
         "Aerial": L.tileLayer("https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}", {
@@ -600,7 +600,7 @@ function loadCustomBasemaps(config) {
 }
 
 function showInfo() {
-//  alert("Welcome to GPSMap.app, an offline capable map viewer with GPS integration!\n\n- Tap the + button to load a raster MBTiles, GeoJSON, KML, GPX, or CSV file directly from your device or cloud storage.\n- Tap the layers button to view online basemaps and manage offline layers.\n\nDeveloped by Bryan McBride - mcbride.bryan@gmail.com\n" + version);
+  alert("سامانه مدیریت اطلاعات مکانی موقوفات \n  اداره نقشه برداری");
 }
 
 function loadSavedFeatures() {

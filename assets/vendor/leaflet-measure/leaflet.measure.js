@@ -120,6 +120,7 @@
                 model: "area",
                 color: this.options.color,
             });
+            this._link.setAttribute("style", "background-color:#8f8;");
             this._measureHandler.enable();
         },
         _expand: function () {
@@ -412,6 +413,7 @@
             }
         },
         _clearOverlay: function () {
+            document.getElementsByClassName("leaflet-measure-toggle")[0].setAttribute("style", "background-color:#fff;")
             var i = 0,
                 overlays = this._trail.overlays,
                 length;
