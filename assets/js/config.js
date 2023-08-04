@@ -1,4 +1,5 @@
 //mesure line config
+alert('config');
 measureDistOptions = {
     position: 'topleft',            // Position to show the control. Values: 'topright', 'topleft', 'bottomright', 'bottomleft'
     unit: 'kilometres',             // Default unit the distances are displayed in. Values: 'kilometres', 'landmiles', 'nauticalmiles'
