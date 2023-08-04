@@ -79,3 +79,18 @@ measureDistOptions = {
     },
 };
 
+
+var measureConf = {
+    linearMeasurement: "Distance measurement",
+    areaMeasurement: "Area measurement",
+    start: "Start",
+    meter: "m",
+    meterDecimals: 0,
+    kilometer: "km",
+    kilometerDecimals: 2,
+    squareMeter: "m²",
+    squareMeterDecimals: 0,
+    squareKilometers: "km²",
+    squareKilometersDecimals: 2
+};
+

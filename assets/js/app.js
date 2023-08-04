@@ -219,6 +219,8 @@ const controls = {
     }).addTo(map),
     
     measureDistCtrl: L.control.polylineMeasure(measureDistOptions).addTo(map),
+    measureCtrl: L.control.measure({}).addTo(map),
+     
 //var measureControl = L.control.measure({ position: 'topleft' });
 //measureControl.addTo(map);
 //    mesureDistCommandCtrl: L.control.mesureDistCommand({
@@ -228,6 +230,7 @@ const controls = {
 //        position: "topleft"
 //    }).addTo(map),
 };
+L.Measure = measureConf;
 
 function handleFile(file) {
     showLoader();
@@ -784,3 +787,16 @@ initSqlJs({
     document.getElementsByClassName("leaflet-control-layers")[0].style.maxHeight = `${(document.getElementById("map").offsetHeight * .75)}px`;
     document.getElementsByClassName("leaflet-control-layers")[0].style.maxWidth = `${(document.getElementById("map").offsetWidth * .75)}px`;
 });
+
+
+//reset app code
+//secondBtn.addEventListener('click', () => {
+//        navigator.serviceWorker
+//          .getRegistration()
+//          .then((reg) => {
+//            return reg.unregister();
+//          })
+//          .then(() => {
+//            navigator.serviceWorker.register('./sw-2.js');
+//          });
+//      });

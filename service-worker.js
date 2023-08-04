@@ -33,6 +33,8 @@ workbox.precaching.precacheAndRoute([
   {url: 'assets/vendor/leaflet-mbtiles/Leaflet.TileLayer.MBTiles.js', revision: '09.09.20.1'},
   {url: 'assets/vendor/leaflet-measure/Leaflet.PolylineMeasure.css', revision: '1'},
   {url: 'assets/vendor/leaflet-measure/Leaflet.PolylineMeasure.js', revision: '1'},
+  {url: 'assets/vendor/leaflet-measure/leaflet.measure.css', revision: '1'},
+  {url: 'assets/vendor/leaflet-measure/leaflet.measure.js', revision: '1'},
   {url: 'assets/vendor/csv2geojson-5.1.1/csv2geojson.min.js', revision: '03.05.21.1'},
   {url: 'assets/vendor/togeojson-0.16.0/togeojson.min.js', revision: '03.05.21.1'},
 ], {
