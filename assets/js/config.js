@@ -1,4 +1,5 @@
 //mesure line config
+window.location.reload()
 alert('config');
 measureDistOptions = {
     position: 'topleft',            // Position to show the control. Values: 'topright', 'topleft', 'bottomright', 'bottomleft'
