@@ -113,7 +113,7 @@ L.Control.menuCommand = L.Control.extend({
     onAdd: function (map) {
         var controlDiv = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
         controlDiv.innerHTML = `
-      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-menu' title='Load File' onclick="alert('ok');">
+      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-menu' title='Load File' onclick="window.location.reload();">
         <i class='icon-menu'></i>
       </a>
     `;
@@ -121,7 +121,7 @@ L.Control.menuCommand = L.Control.extend({
                 .addListener(controlDiv, 'click', L.DomEvent.stopPropagation)
                 .addListener(controlDiv, 'click', L.DomEvent.preventDefault)
                 .addListener(controlDiv, 'click', function () {
-                    MapShowCommand();
+                    window.location.reload();
                 });
 
 //        var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
@@ -145,7 +145,7 @@ L.Control.mesureAreaCommand = L.Control.extend({
     onAdd: function (map) {
         var controlDiv = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
         controlDiv.innerHTML = `
-      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-mesurearea' title='Load File' onclick="alert('ok');">
+      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-mesurearea' title='Load File' onclick="window.location.reload();">
         <i class='icon-mesurearea'></i>
       </a>
     `;
@@ -153,7 +153,7 @@ L.Control.mesureAreaCommand = L.Control.extend({
                 .addListener(controlDiv, 'click', L.DomEvent.stopPropagation)
                 .addListener(controlDiv, 'click', L.DomEvent.preventDefault)
                 .addListener(controlDiv, 'click', function () {
-                    MapShowCommand();
+//                    MapShowCommand();
                 });
 
 //        var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
