@@ -1,12 +1,3 @@
-/*********************************************************
-**                                                      **
-**       Leaflet Plugin "Leaflet.PolylineMeasure"       **
-**       File "Leaflet.PolylineMeasure.js"              **
-**       Date: 2022-12-28                               **
-**                                                      **
-*********************************************************/
-
-
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD

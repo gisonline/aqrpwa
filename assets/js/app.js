@@ -1,4 +1,4 @@
-const version = "2023.10.27.3";
+const version = "2023.10.27.4";
 const mapStore = localforage.createInstance({
     name: "maps",
     storeName: "saved_maps"
@@ -180,16 +180,6 @@ const controls = {
     menuCommandCtrl: L.control.menuCommand({
         position: "topleft"
     }).addTo(map),
-    
-    measureDistCtrl: L.control.polylineMeasure(measureDistOptions).addTo(map),
-//var measureControl = L.control.measure({ position: 'topleft' });
-//measureControl.addTo(map);
-//    mesureDistCommandCtrl: L.control.mesureDistCommand({
-//        position: "topleft"
-//    }).addTo(map),
-//    mesureAreaCommandCtrl: L.control.mesureAreaCommand({
-//        position: "topleft"
-//    }).addTo(map),
 
     locateCtrl: L.control.locate({
         icon: "icon-gps_fixed",
@@ -227,7 +217,17 @@ const controls = {
 
     scaleCtrl: L.control.scale({
         position: "bottomleft"
-    }).addTo(map)
+    }).addTo(map),
+    
+    measureDistCtrl: L.control.polylineMeasure(measureDistOptions).addTo(map),
+//var measureControl = L.control.measure({ position: 'topleft' });
+//measureControl.addTo(map);
+//    mesureDistCommandCtrl: L.control.mesureDistCommand({
+//        position: "topleft"
+//    }).addTo(map),
+//    mesureAreaCommandCtrl: L.control.mesureAreaCommand({
+//        position: "topleft"
+//    }).addTo(map),
 };
 
 function handleFile(file) {
