@@ -8,9 +8,9 @@ workbox.setConfig({
 workbox.precaching.precacheAndRoute([
   {url: 'index.html', revision: '4'},
   {url: 'manifest.json', revision: '1'},
-  {url: 'assets/js/config.js', revision: '2'},
-  {url: 'assets/css/app.css', revision: '4'},
-  {url: 'assets/js/app.js', revision: '5'},
+  {url: 'assets/js/config.js', revision: '3'},
+  {url: 'assets/css/app.css', revision: '6'},
+  {url: 'assets/js/app.js', revision: '6'},
   {url: 'assets/img/apple-touch-icon.png', revision: '09.09.20.2'},
   {url: 'assets/img/favicon-32x32.png', revision: '09.09.20.2'},
   {url: 'assets/img/favicon-16x16.png', revision: '09.09.20.2'},
@@ -33,8 +33,8 @@ workbox.precaching.precacheAndRoute([
   {url: 'assets/vendor/leaflet-mbtiles/Leaflet.TileLayer.MBTiles.js', revision: '09.09.20.1'},
   {url: 'assets/vendor/leaflet-measure/Leaflet.PolylineMeasure.css', revision: '1'},
   {url: 'assets/vendor/leaflet-measure/Leaflet.PolylineMeasure.js', revision: '1'},
-  {url: 'assets/vendor/leaflet-measure/leaflet.measure.css', revision: '1'},
-  {url: 'assets/vendor/leaflet-measure/leaflet.measure.js', revision: '1'},
+  {url: 'assets/vendor/leaflet-measure/leaflet.measure.css', revision: '2'},
+  {url: 'assets/vendor/leaflet-measure/leaflet.measure.js', revision: '2'},
   {url: 'assets/vendor/csv2geojson-5.1.1/csv2geojson.min.js', revision: '03.05.21.1'},
   {url: 'assets/vendor/togeojson-0.16.0/togeojson.min.js', revision: '03.05.21.1'},
 ], {

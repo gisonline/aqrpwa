@@ -48,8 +48,8 @@
             this._link.href = "#";
 
             if (this.options.title) {
-                var title = L.DomUtil.create("h3", "", this._contents);
-                title.innerText = this.options.title;
+//                var title = L.DomUtil.create("h3", "", this._contents);
+//                title.innerText = this.options.title;
             }
 
             this._startAreaMeasure();
