@@ -211,6 +211,9 @@ const controls = {
             hideLoader();
             document.querySelector(".leaflet-control-locate").getElementsByTagName("span")[0].className = "icon-gps_off";
             alert(e.message);
+        },
+        onLocationFound: (e) => {
+            console.log(e);
         }
     }).addTo(map),
 
