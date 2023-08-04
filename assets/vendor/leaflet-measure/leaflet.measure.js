@@ -89,9 +89,9 @@
         },
         _initLayout: function () {
             this._buildContainer();
-            return;
             L.DomEvent.disableClickPropagation(this._container);
             L.DomEvent.disableScrollPropagation(this._container);
+            return;
             if (this.options.collapsed) {
                 L.DomEvent.on(
                     this._container,
