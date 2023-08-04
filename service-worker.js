@@ -8,7 +8,8 @@ workbox.setConfig({
 workbox.precaching.precacheAndRoute([
   {url: 'index.html', revision: '10.27.22.3'},
   {url: 'manifest.json', revision: '09.09.20.2'},
-//  {url: 'assets/js/app.js', revision: '10.27.23.3'},
+  {url: 'assets/js/config.js', revision: '10.27.23.3'},
+  {url: 'assets/js/app.js', revision: '10.27.23.3'},
   {url: 'assets/css/app.css', revision: '05.16.22.1'},
   {url: 'assets/img/apple-touch-icon.png', revision: '09.09.20.2'},
   {url: 'assets/img/favicon-32x32.png', revision: '09.09.20.2'},
@@ -25,10 +26,12 @@ workbox.precaching.precacheAndRoute([
   {url: 'assets/vendor/leaflet-1.9.4/images/marker-icon-2x.png', revision: '10.27.22.2'},
   {url: 'assets/vendor/leaflet-1.9.4/images/marker-shadow.png', revision: '10.27.22.2'},
   {url: 'assets/vendor/leaflet-1.9.4/leaflet.css', revision: '10.27.22.2'},
-//  {url: 'assets/vendor/leaflet-1.9.4/leaflet.js', revision: '10.27.22.2'},
+  {url: 'assets/vendor/leaflet-1.9.4/leaflet.js', revision: '10.27.22.2'},
   {url: 'assets/vendor/leaflet-locatecontrol-0.76.1/L.Control.Locate.min.css', revision: '05.16.22.2س'},
   {url: 'assets/vendor/leaflet-locatecontrol-0.76.1/L.Control.Locate.min.js', revision: '05.16.22.2'},
   {url: 'assets/vendor/leaflet-mbtiles/Leaflet.TileLayer.MBTiles.js', revision: '09.09.20.1'},
+  {url: 'assets/vendor/leaflet-measure/Leaflet.PolylineMeasure.css', revision: '1'},
+  {url: 'assets/vendor/leaflet-measure/Leaflet.PolylineMeasure.js', revision: '1'},
   {url: 'assets/vendor/csv2geojson-5.1.1/csv2geojson.min.js', revision: '03.05.21.1'},
   {url: 'assets/vendor/togeojson-0.16.0/togeojson.min.js', revision: '03.05.21.1'}
 ], {
