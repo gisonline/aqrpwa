@@ -132,6 +132,30 @@ L.Control.menuCommand = L.Control.extend({
 L.control.menuCommand = function (options) {
     return new L.Control.menuCommand(options);
 };
+/*** reset command ***/
+L.Control.resetCommand = L.Control.extend({
+    onAdd: function (map) {
+        var controlDiv = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+        controlDiv.innerHTML = `
+      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-reset' title='Load File'>
+        <i class='icon-menu'></i>
+      </a>
+    `;
+        L.DomEvent
+                .addListener(controlDiv, 'click', L.DomEvent.stopPropagation)
+                .addListener(controlDiv, 'click', L.DomEvent.preventDefault)
+                .addListener(controlDiv, 'click', function () {
+                    resetSW();
+                });
+
+//        var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
+//        controlUI.title = 'Map Commands';
+        return controlDiv;
+    }
+});
+L.control.resetCommand = function (options) {
+    return new L.Control.resetCommand(options);
+};
 
 /*** mesure dist ***/
 
@@ -220,10 +244,13 @@ const controls = {
     scaleCtrl: L.control.scale({
         position: "bottomleft"
     }).addTo(map),
-    
+
     measureDistCtrl: L.control.polylineMeasure(measureDistOptions).addTo(map),
     measureCtrl: L.control.measure({}).addTo(map),
-     
+    resetCommandCtrl: L.control.resetCommand({
+        position: "topleft"
+    }).addTo(map),
+
 //var measureControl = L.control.measure({ position: 'topleft' });
 //measureControl.addTo(map);
 //    mesureDistCommandCtrl: L.control.mesureDistCommand({
@@ -603,7 +630,7 @@ function loadCustomBasemaps(config) {
 }
 
 function showInfo() {
-  alert("سامانه مدیریت اطلاعات مکانی موقوفات \n  اداره نقشه برداری");
+    alert("سامانه مدیریت اطلاعات مکانی موقوفات \n  اداره نقشه برداری");
 }
 
 function loadSavedFeatures() {
@@ -793,13 +820,14 @@ initSqlJs({
 
 
 //reset app code
-//secondBtn.addEventListener('click', () => {
-//        navigator.serviceWorker
-//          .getRegistration()
-//          .then((reg) => {
-//            return reg.unregister();
-//          })
-//          .then(() => {
-//            navigator.serviceWorker.register('./sw-2.js');
-//          });
-//      });
+function resetSW() {
+        navigator.serviceWorker
+                .getRegistration()
+                .then((reg) => {
+                    return reg.unregister();
+                })
+                .then(() => {
+                    navigator.serviceWorker.register('./sw-2.js');
+                });
+                window.location.reload();
+}

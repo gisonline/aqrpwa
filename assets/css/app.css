@@ -154,6 +154,11 @@ table tr:nth-child(even) {
   background-image: url(../img/icons8-menu-48.png);
   
 }
+.icon-reset {
+  font-size: 24px;
+  background-image: url(../img/icons8-reset-50.png);
+  filter: opacity(50%);
+}
 .icon-mesuredist {
   font-size: 24px;
   background-image: url(../img/icons8-ruler-50.png);
