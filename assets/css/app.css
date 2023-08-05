@@ -152,12 +152,13 @@ table tr:nth-child(even) {
 .icon-menu {
   font-size: 24px;
   background-image: url(../img/icons8-menu-48.png);
-  
+  background-size: 24px 24px;
 }
 .icon-reset {
   font-size: 24px;
   background-image: url(../img/icons8-reset-50.png);
-  filter: opacity(50%);
+  background-size: 24px 24px;
+  filter: opacity(100%);
 }
 .icon-mesuredist {
   font-size: 24px;
