@@ -44,7 +44,7 @@
                 navigator.serviceWorker.register("service-worker.js");
             }
             // This code sample uses features introduced in Workbox v6.
-            import {Workbox} from '/assets/vendor/workbox-6.5.4/workbox-window.prod.mjs';
+            import {Workbox} from 'assets/vendor/workbox-6.5.4/workbox-window.prod.mjs';
 
             if ('serviceWorker' in navigator) {
                 const wb = new Workbox('service-worker.js');
