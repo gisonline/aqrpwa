@@ -827,8 +827,7 @@ function resetSW() {
                     return reg.unregister();
                 })
                 .then(() => {
-                    navigator.serviceWorker.register('./sw-2.js');
+                    navigator.serviceWorker.register('assets/vendor/workbox-6.5.4/workbox-sw.js');
                 });
                 window.location.reload();
 }
-alert('ok')
