@@ -1,4 +1,5 @@
 const version = "2023.10.27.4";
+
 const mapStore = localforage.createInstance({
     name: "maps",
     storeName: "saved_maps"
