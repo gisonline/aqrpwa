@@ -5,11 +5,9 @@
         <group>
             <file>file:/D:/develope/www_pwa/assets/css/app.css</file>
             <file>file:/D:/develope/www_pwa/manifest.json</file>
-            <file>file:/D:/develope/www_pwa/assets/vendor/leaflet-locatecontrol-0.79.0/L.Control.Locate.js</file>
             <file>file:/D:/develope/www_pwa/service-worker.js</file>
             <file>file:/D:/develope/www_pwa/index.html</file>
             <file>file:/D:/develope/www_pwa/assets/js/config.js</file>
-            <file>file:/D:/develope/www_pwa/assets/vendor/leaflet-measure/leaflet.measure.css</file>
             <file>file:/D:/develope/www_pwa/assets/js/app.js</file>
         </group>
     </open-files>
