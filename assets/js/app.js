@@ -239,6 +239,7 @@ const controls = {
         },
         onLocationFound: (e) => {
             console.log(e);
+            alert('loc')
         }
     }).addTo(map),
 
