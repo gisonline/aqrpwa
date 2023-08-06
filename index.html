@@ -44,10 +44,8 @@
                 navigator.serviceWorker.register("service-worker.js");
             }
             
-            var url = window.location.href;
-            var path =  url+'/assets/vendor/workbox-6.5.4/workbox-window.prod.mjs';
             // This code sample uses features introduced in Workbox v6.
-            import {Workbox} from '../aqpwa/assets/vendor/workbox-6.5.4/workbox-window.prod.mjs';
+            import {Workbox} from '../aqrpwa/assets/vendor/workbox-6.5.4/workbox-window.prod.mjs';
 
             if ('serviceWorker' in navigator) {
                 const wb = new Workbox('service-worker.js');
