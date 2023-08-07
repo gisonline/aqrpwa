@@ -10,7 +10,7 @@ workbox.precaching.precacheAndRoute([
     {url: 'manifest.json', revision: '1'},
     {url: 'assets/js/config.js', revision: '3'},
     {url: 'assets/css/app.css', revision: '6'},
-    {url: 'assets/js/app.js', revision: '2'},
+    {url: 'assets/js/app.js', revision: '3'},
     {url: 'assets/img/apple-touch-icon.png', revision: '1'},
     {url: 'assets/img/favicon-32x32.png', revision: '1'},
     {url: 'assets/img/favicon-16x16.png', revision: '1'},

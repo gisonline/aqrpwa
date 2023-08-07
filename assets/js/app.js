@@ -853,3 +853,4 @@ const requestWakeLock = async () => {
     }
 };
 requestWakeLock();
+alert('3')
