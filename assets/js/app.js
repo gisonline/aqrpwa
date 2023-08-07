@@ -832,9 +832,25 @@ function resetSW() {
                 });
                 window.location.reload();
 }
-const updateChannel = new BroadcastChannel('precache-channel');
-updateChannel.addEventListener('message', event => {
-  if (confirm(`New content is available!. Click OK to refresh`)) {
-    window.location.reload();
-  }
-});
+//const updateChannel = new BroadcastChannel('precache-channel');
+//updateChannel.addEventListener('message', event => {
+//  if (confirm(`New content is available!. Click OK to refresh`)) {
+//    window.location.reload();
+//  }
+//});
+
+//import { Workbox } from 'workbox-window';
+
+//if ('serviceWorker' in navigator) {
+//  const wb = new Workbox('service-worker.js');
+// 
+//  wb.addEventListener('installed', event => {
+//    if (event.isUpdate) {
+//      if (confirm(`New content is available!. Click OK to refresh`)) {
+//        window.location.reload();
+//      }
+//    }
+//  });
+//
+//  wb.register();
+//}
