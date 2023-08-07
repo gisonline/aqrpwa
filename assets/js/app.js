@@ -249,7 +249,7 @@ const controls = {
     measureDistCtrl: L.control.polylineMeasure(measureDistOptions).addTo(map),
     measureCtrl: L.control.measure({}).addTo(map),
     resetCommandCtrl: L.control.resetCommand({
-        position: "topleft"
+        position: "bottomright"
     }).addTo(map),
 
 //var measureControl = L.control.measure({ position: 'topleft' });
