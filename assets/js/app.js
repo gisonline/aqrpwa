@@ -832,3 +832,4 @@ function resetSW() {
             });
     window.location.reload();
 }
+alert('ok')
