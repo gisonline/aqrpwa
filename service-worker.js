@@ -1,7 +1,7 @@
 importScripts('assets/vendor/workbox-6.5.4/workbox-sw.js');
 
 workbox.setConfig({
-    debug: false,
+    debug: true,
     modulePathPrefix: 'assets/vendor/workbox-6.5.4/'
 });
 
