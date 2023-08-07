@@ -831,3 +831,4 @@ function resetSW() {
                     navigator.serviceWorker.register('assets/vendor/workbox-6.5.4/workbox-sw.js');
                 });
                 window.location.reload();
+}
