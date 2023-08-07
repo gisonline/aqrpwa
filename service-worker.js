@@ -40,10 +40,7 @@ precacheAndRoute([
     {url: 'assets/vendor/leaflet-measure/leaflet.measure.js', revision: '2'},
     {url: 'assets/vendor/csv2geojson-5.1.1/csv2geojson.min.js', revision: '03.05.21.1'},
     {url: 'assets/vendor/togeojson-0.16.0/togeojson.min.js', revision: '03.05.21.1'}
-], {
-    // Ignore all URL parameters.
-    ignoreURLParametersMatching: [/.*/]
-});
+]);
 
 //workbox.precaching.precacheAndRoute([
 //    {url: 'index.html', revision: '4'},
