@@ -854,4 +854,4 @@ function resetSW() {
 //
 //  wb.register();
 //}
-alert('4')
+alert('5')
