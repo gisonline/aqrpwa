@@ -822,13 +822,33 @@ initSqlJs({
 
 //reset app code
 function resetSW() {
-        navigator.serviceWorker
-                .getRegistration()
-                .then((reg) => {
-                    return reg.unregister();
-                })
-                .then(() => {
-                    navigator.serviceWorker.register('assets/vendor/workbox-6.5.4/workbox-sw.js');
-                });
-                window.location.reload();
+    navigator.serviceWorker
+            .getRegistration()
+            .then((reg) => {
+                return reg.unregister();
+            })
+            .then(() => {
+                navigator.serviceWorker.register('assets/vendor/workbox-6.5.4/workbox-sw.js');
+            });
+    window.location.reload();
 }
+
+const requestWakeLock = async () => {
+    try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        wakeLock.addEventListener('release', (e) => {
+            console.log(e);
+//            wakeLockCheckbox.checked = false;
+//            statusDiv.textContent = 'Wake Lock was released';
+            console.log('Wake Lock was released');
+        });
+//        wakeLockCheckbox.checked = true;
+//        statusDiv.textContent = 'Wake Lock is active';
+        console.log('Wake Lock is active');
+    } catch (e) {
+//        wakeLockCheckbox.checked = false;
+//        statusDiv.textContent = `${e.name}, ${e.message}`;
+        console.error(`${e.name}, ${e.message}`);
+    }
+};
+requestWakeLock();
