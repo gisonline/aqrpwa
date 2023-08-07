@@ -44,6 +44,21 @@ workbox.precaching.precacheAndRoute([
     ignoreURLParametersMatching: [/.*/]
 });
 
-workbox.precaching.addPlugins([
-    new workbox.broadcastUpdate.Plugin('precache-channel')
-])
+//workbox.precaching.addPlugins([
+//    new workbox.broadcastUpdate.Plugin('precache-channel')
+//])
+import { Workbox } from 'workbox-window';
+
+if ('serviceWorker' in navigator) {
+  const wb = new Workbox('service-worker.js');
+ 
+  wb.addEventListener('installed', event => {
+    if (event.isUpdate) {
+      if (confirm(`New content is available!. Click OK to refresh`)) {
+        window.location.reload();
+      }
+    }
+  });
+
+  wb.register();
+}
