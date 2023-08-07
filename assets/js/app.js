@@ -831,27 +831,3 @@ function resetSW() {
                     navigator.serviceWorker.register('assets/vendor/workbox-6.5.4/workbox-sw.js');
                 });
                 window.location.reload();
-}
-//const updateChannel = new BroadcastChannel('precache-channel');
-//updateChannel.addEventListener('message', event => {
-//  if (confirm(`New content is available!. Click OK to refresh`)) {
-//    window.location.reload();
-//  }
-//});
-
-//import { Workbox } from 'workbox-window';
-
-//if ('serviceWorker' in navigator) {
-//  const wb = new Workbox('service-worker.js');
-// 
-//  navigator.serviceWorker.addEventListener('installed', event => {
-//    if (event.isUpdate) {
-//      if (confirm(`New content is available!. Click OK to refresh`)) {
-//        window.location.reload();
-//      }
-//    }
-//  });
-//
-//  wb.register();
-//}
-alert('5')
