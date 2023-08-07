@@ -832,3 +832,9 @@ function resetSW() {
                 });
                 window.location.reload();
 }
+const updateChannel = new BroadcastChannel('precache-channel');
+updateChannel.addEventListener('message', event => {
+  if (confirm(`New content is available!. Click OK to refresh`)) {
+    window.location.reload();
+  }
+});

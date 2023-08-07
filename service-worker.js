@@ -43,4 +43,7 @@ workbox.precaching.precacheAndRoute([
     // Ignore all URL parameters.
     ignoreURLParametersMatching: [/.*/]
 });
-                                    
+
+workbox.precaching.addPlugins([
+    new workbox.broadcastUpdate.Plugin('precache-channel')
+])
