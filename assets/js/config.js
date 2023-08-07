@@ -93,4 +93,3 @@ var measureConf = {
     squareKilometers: "km²",
     squareKilometersDecimals: 2
 };
-
