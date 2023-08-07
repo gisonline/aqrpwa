@@ -83,6 +83,14 @@ workbox.precaching.precacheAndRoute([
     ignoreURLParametersMatching: [/.*/]
 });
 
+
+self.addEventListener('installed', event => {
+    if (event.isUpdate) {
+      if (confirm(`New content is available!. Click OK to refresh`)) {
+        window.location.reload();
+      }
+    }
+  });
 //workbox.precaching.addPlugins([
 //    new workbox.broadcastUpdate.Plugin('precache-channel')
 //])
