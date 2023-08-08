@@ -835,15 +835,8 @@ function resetSW() {
 
 // Some constant polyline coords:
             const line1coords = [
-                { lat: 22.156883186860703, lng: -158.95019531250003 },
-                { lat: 22.01436065310322, lng: -157.33520507812503 },
-                { lat: 21.391704731036587, lng: -156.17065429687503 },
-                { lat: 20.64306554672647, lng: -155.56640625000003 },
-                { lat: 19.342244996771804, lng: -155.33569335937503 }
-            ];
-            const line2coords = [
-                { lat: 19.880391767822505, lng: -159.67529296875003 },
-                { lat: 17.90556881196468, lng: -156.39038085937503 }
+                { lat: 36.31912620838598, lng: 59.487787386962424 },
+                { lat: 36.41912620838598, lng: 59.587787386962424 }
             ];
 
-            controls.measureDistCtrl.seed([line1coords, line2coords])
+            controls.measureDistCtrl.seed([line1coords])
