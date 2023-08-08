@@ -13,8 +13,8 @@ measureDistOptions = {
     tooltipTextResume: '',//'<br>Press CTRL-key and click to <b>resume line</b>',
     tooltipTextAdd: '',//'Press CTRL-key and click to <b>add point</b>',
                                     // language dependend labels for point's tooltips
-    measureControlTitleOn: 'Turn on PolylineMeasure',   // Title for the Measure Control going to be switched on
-    measureControlTitleOff: 'Turn off PolylineMeasure', // Title for the Measure Control going to be switched off
+    measureControlTitleOn: 'شروع اندازه گیری',   // Title for the Measure Control going to be switched on
+    measureControlTitleOff: 'پایان اندازه گیری', // Title for the Measure Control going to be switched off
     measureControlLabel: '&#8614;', // Label of the Measure Control (Unicode symbols are possible)
     measureControlClasses: [],      // Classes to apply to the Measure Control
     showClearControl: true,        // Show a control to clear all the measurements

@@ -91,7 +91,7 @@ L.Control.AddFile = L.Control.extend({
 
         const div = L.DomUtil.create("div", "leaflet-bar leaflet-control");
         div.innerHTML = `
-      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn' title='Load File' onclick='fileInput.click();'>
+      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn' title='بارگذاری' onclick='fileInput.click();'>
         <i class='icon-add'></i>
       </a>
     `;
@@ -115,7 +115,7 @@ L.Control.menuCommand = L.Control.extend({
     onAdd: function (map) {
         var controlDiv = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
         controlDiv.innerHTML = `
-      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-menu' title='Load File' onclick="">
+      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-menu' title='منو' onclick="">
         <i class='icon-menu'></i>
       </a>
     `;
@@ -139,7 +139,7 @@ L.Control.resetCommand = L.Control.extend({
     onAdd: function (map) {
         var controlDiv = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
         controlDiv.innerHTML = `
-      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-reset' title='بارگذاری'>
+      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-reset' title='نمایش مجدد'>
         <i class='icon-menu'></i>
       </a>
     `;
@@ -175,8 +175,6 @@ L.Control.measureOnWalking = L.Control.extend({
                     toggleMeasureWalking(controlDiv)
                 });
 
-//        var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
-//        controlUI.title = 'Map Commands';
         return controlDiv;
     }
 });
@@ -191,9 +189,9 @@ const controls = {
         position: "topright"
     }).addTo(map),
 
-//  fileCtrl: L.control.addfile({
-//    position: "bottomright"
-//  }).addTo(map),
+  fileCtrl: L.control.addfile({
+    position: "bottomright"
+  }).addTo(map),
 //  
     menuCommandCtrl: L.control.menuCommand({
         position: "topleft"
@@ -262,7 +260,7 @@ function handleFile(file) {
         const format = file.name.split(".").pop();
         loadVector(file, name, format);
     } else {
-        alert("MBTiles, GeoJSON, KML, GPX, and CSV files supported.");
+        alert("MBTiles, GeoJSON, KML, GPX, and CSV پشتیبانی می شوند.");
         hideLoader();
     }
 }
