@@ -832,7 +832,6 @@ function toggleMeasureWalking(div) {
     if (_wlakingMeasure) {   // if walking measuring is going to be switched on
         console.log('on')
         _startWlakingMeasure = liveLocLatlng;
-        console.log(div)
         div.children[0].setAttribute("style", "background-color:#8f8;");
 //        console.log(_startWlakingMeasure)
     } else {   // if measuring is going to be switched off
