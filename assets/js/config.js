@@ -3,7 +3,7 @@ measureDistOptions = {
     position: 'topleft',            // Position to show the control. Values: 'topright', 'topleft', 'bottomright', 'bottomleft'
     unit: 'kilometres',             // Default unit the distances are displayed in. Values: 'kilometres', 'landmiles', 'nauticalmiles'
     useSubunits: true,              // Use subunits (metres/feet) in tooltips if distances are less than 1 kilometre/landmile
-    clearMeasurementsOnStop: true,  // Clear all measurements when Measure Control is switched off
+    clearMeasurementsOnStop: false,  // Clear all measurements when Measure Control is switched off
     showBearings: true,            // Whether bearings are displayed within the tooltips
     bearingTextIn: 'از',            // language dependend label for inbound bearings
     bearingTextOut: 'به',          // language dependend label for outbound bearings

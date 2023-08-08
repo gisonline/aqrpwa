@@ -1,4 +1,5 @@
 const version = "2023.10.27.4";
+var liveLocLatlng = {};
 //alert(version)
 const mapStore = localforage.createInstance({
     name: "maps",
@@ -158,10 +159,8 @@ L.control.resetCommand = function (options) {
     return new L.Control.resetCommand(options);
 };
 
-/*** mesure dist ***/
-
-/*** mesure area ***/
-L.Control.mesureAreaCommand = L.Control.extend({
+/*** measure walking ***/
+L.Control.measureOnWalking = L.Control.extend({
 //    options: {
 //        position: 'topleft',
 //    },
@@ -169,15 +168,15 @@ L.Control.mesureAreaCommand = L.Control.extend({
     onAdd: function (map) {
         var controlDiv = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
         controlDiv.innerHTML = `
-      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-mesurearea' title='Load File' onclick="window.location.reload();">
-        <i class='icon-mesurearea'></i>
+      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-mesurewalking' title='مساحی' onclick="">
+        <i class='icon-menu'></i>
       </a>
     `;
         L.DomEvent
                 .addListener(controlDiv, 'click', L.DomEvent.stopPropagation)
                 .addListener(controlDiv, 'click', L.DomEvent.preventDefault)
                 .addListener(controlDiv, 'click', function () {
-//                    MapShowCommand();
+                    toggleMeasureWalking()
                 });
 
 //        var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
@@ -185,9 +184,8 @@ L.Control.mesureAreaCommand = L.Control.extend({
         return controlDiv;
     }
 });
-
-L.control.mesureAreaCommand = function (options) {
-    return new L.Control.mesureAreaCommand(options);
+L.control.measureOnWalking = function (options) {
+    return new L.Control.measureOnWalking(options);
 };
 /*** End custom control ***/
 
@@ -238,7 +236,7 @@ const controls = {
             alert(e.message);
         },
         onLocationFound: (e) => {
-            console.log(e);
+            liveLocLatlng = e.latlng
         }
     }).addTo(map),
 
@@ -251,15 +249,10 @@ const controls = {
     resetCommandCtrl: L.control.resetCommand({
         position: "bottomright"
     }).addTo(map),
+    measureOnWalkingCtrl: L.control.measureOnWalking({
+        position: "topleft"
+    }).addTo(map),
 
-//var measureControl = L.control.measure({ position: 'topleft' });
-//measureControl.addTo(map);
-//    mesureDistCommandCtrl: L.control.mesureDistCommand({
-//        position: "topleft"
-//    }).addTo(map),
-//    mesureAreaCommandCtrl: L.control.mesureAreaCommand({
-//        position: "topleft"
-//    }).addTo(map),
 };
 L.Measure = measureConf;
 
@@ -833,10 +826,76 @@ function resetSW() {
     window.location.reload();
 }
 
-// Some constant polyline coords:
-            const line1coords = [
-                { lat: 36.31912620838598, lng: 59.487787386962424 },
-                { lat: 36.41912620838598, lng: 59.587787386962424 }
-            ];
+var _wlakingMeasure = false;
+var _startWlakingMeasure = null;
+var _endWlakingMeasure = null;
+function toggleMeasureWalking() {
+    _wlakingMeasure = !_wlakingMeasure;
+    if (_wlakingMeasure) {   // if walking measuring is going to be switched on
+        console.log('on')
+        _startWlakingMeasure = liveLocLatlng;
+        console.log(_startWlakingMeasure)
+//                this._mapdragging = false;
+//                this._saveNonpolylineEvents();
+//                this._measureControl.classList.add('polyline-measure-controlOnBgColor');
+//                this._measureControl.style.backgroundColor = this.options.backgroundColor;
+//                this._measureControl.title = this.options.measureControlTitleOff;
+//                this._oldCursor = this._map._container.style.cursor;          // save former cursor type
+//                this._map._container.style.cursor = 'crosshair';
+//                this._doubleClickZoom = this._map.doubleClickZoom.enabled();  // save former status of doubleClickZoom
+//                this._map.doubleClickZoom.disable();
+//                // create LayerGroup "layerPaint" (only) the first time Measure Control is switched on
+//                if (!this._layerPaint) {
+//                    this._layerPaint = L.layerGroup().addTo(this._map);
+//                }
+//                this._map.on('mousemove', this._mouseMove, this);   //  enable listing to 'mousemove', 'click', 'keydown' events
+//                this._map.on('click', this._mouseClick, this);
+//                L.DomEvent.on(document, 'keydown', this._onKeyDown, this);
+//                this._resetPathVariables();
+    } else {   // if measuring is going to be switched off
+        console.log('off');
+        _endWlakingMeasure = liveLocLatlng;
+        console.log(_endWlakingMeasure)
+        const linecoords = [
+            _startWlakingMeasure,
+            _endWlakingMeasure
+        ];
+        controls.measureDistCtrl.seed([linecoords])
+//                this._savePolylineEvents();
+//                this._measureControl.classList.remove('polyline-measure-controlOnBgColor');
+//                this._measureControl.style.backgroundColor = this._defaultControlBgColor;
+//                this._measureControl.title = this.options.measureControlTitleOn;
+//                this._map._container.style.cursor = this._oldCursor;
+//                this._map.off('mousemove', this._mouseMove, this);
+//                this._map.off('click', this._mouseClick, this);
+//                this._map.off('mousemove', this._resumeFirstpointMousemove, this);
+//                this._map.off('click', this._resumeFirstpointClick, this);
+//                this._map.off('mousemove', this._dragCircleMousemove, this);
+//                this._map.off('mouseup', this._dragCircleMouseup, this);
+//                L.DomEvent.off(document, 'keydown', this._onKeyDown, this);
+//                if (this._doubleClickZoom) {
+//                    this._map.doubleClickZoom.enable();
+//                }
+//                if (this.options.clearMeasurementsOnStop && this._layerPaint) {
+//                    this._clearAllMeasurements();
+//                }
+//                // to remove temp. Line if line at the moment is being drawn and not finished while clicking the control
+//                if (this._cntCircle !== 0) {
+//                    this._finishPolylinePath();
+//                }
+    }
+    // allow easy to connect the measure control to the app, f.e. to disable the selection on the map when the measurement is turned on
+//            this._map.fire('polylinemeasure:toggle', {status: this._measuring});
+}
 
-            controls.measureDistCtrl.seed([line1coords])
+// Some constant polyline coords:
+//const line1coords = [
+//    {lat: 36.31912620838598, lng: 59.487787386962424},
+//    {lat: 36.41912620838598, lng: 59.587787386962424}
+//];
+//const line2coords = [
+//    {lat: 34.31912620838598, lng: 58.487787386962424},
+//    {lat: 35.41912620838598, lng: 59.587787386962424}
+//];
+//
+//controls.measureDistCtrl.seed([line1coords, line2coords])
