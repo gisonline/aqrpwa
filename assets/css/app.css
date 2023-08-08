@@ -176,7 +176,7 @@ table tr:nth-child(even) {
 .icon-mesurewalking {
   font-size: 24px;
   background-image: url(../img/icons8-depth-50.png);
-  filter: opacity(70%);
+  filter: opacity(100%);
 }
 [class^="icon-"], [class*=" icon-"] {
   line-height: unset;
