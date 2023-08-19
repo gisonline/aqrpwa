@@ -115,8 +115,10 @@ L.Control.menuCommand = L.Control.extend({
     onAdd: function (map) {
         var controlDiv = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
         controlDiv.innerHTML = `
-      <a class='leaflet-bar-part leaflet-bar-part-single file-control-btn icon-menu' title='منو' onclick="">
-        <i class='icon-menu'></i>
+      <a class='' title='منو'>
+            <button id="burger" class="leaflet-bar-part leaflet-bar-part-single file-control-btn open-main-nav">
+		<span class="burger"></span>
+            </button>
       </a>
     `;
         L.DomEvent

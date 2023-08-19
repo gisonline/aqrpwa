@@ -26,6 +26,22 @@
             <div class="progress" id="progress-bar">
                 <div class="indeterminate"></div>
             </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="#">مشخصات کاربری</a>
+                    </li>
+                    <li>
+                        <a href="#">لیست بازدید های امروز</a>
+                    </li>
+                    <li>
+                        <a href="#">نمایش مسیر بازدید</a>
+                    </li>
+                    <li>
+                        <a href="index.html">خروج</a>
+                    </li>
+                </ul>
+            </nav>
         </main>
         <script src="assets/js/config.js"></script>
         <script src="assets/vendor/sqljs-1.8.0/sql-wasm.js"></script>
@@ -63,6 +79,19 @@
                 }
             };
             registerServiceWorker();
+//            منو
+            let burger = document.getElementById('burger'),
+                    nav = document.getElementById('main-nav');
+
+            burger.addEventListener('click', function (e) {
+                this.classList.toggle('is-open');
+                nav.classList.toggle('is-open');
+            });
+
+            /* Onload demo - dirty timeout */
+            let clickEvent = new Event('click');
+
+
         </script>
         <noscript>This website requires JavaScript!</noscript>
     </body>
