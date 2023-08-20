@@ -2,7 +2,7 @@
   "name": "آستان قدس رضوی \n\n اداره نقشه برداری",
   "short_name": "siagh GIS app",
   "description": "An offline capable map viewer with GPS integration for aqrazavi",
-  "start_url": "index.html",
+  "start_url": "main.html",
   "display": "standalone",
   "background_color": "#2196f3",
   "theme_color": "#2196f3",
