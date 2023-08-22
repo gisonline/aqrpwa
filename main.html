@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="assets/vendor/leaflet-measure/leaflet.measure.css" />
         <link rel="stylesheet" href="assets/vendor/icomoon/style.css">
         <link rel="stylesheet" href="assets/css/app.css">
+        <link rel="stylesheet" href="assets/vendor/bootstrap-5.3.1/css/bootstrap.rtl.min.css">
     </head>
     <body>
         <main id="map">
@@ -32,7 +33,7 @@
                         <a href="#">مشخصات کاربری</a>
                     </li>
                     <li>
-                        <a href="#">لیست بازدید های امروز</a>
+                        <a href="#" onclick="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">لیست بازدید های امروز</a>
                     </li>
                     <li>
                         <a href="#">نمایش مسیر بازدید</a>
@@ -42,8 +43,50 @@
                     </li>
                 </ul>
             </nav>
+            <!--            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>-->
+
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasTopLabel">لسیت بازدید ها</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </main>
-        <script src="assets/js/config.js"></script>
+
+
+        <script src="assets/vendor/jquery/jquery-3.7.0.min.js"></script>
+        <script src="assets/vendor/bootstrap-5.3.1/js/bootstrap.bundle.min.js"></script>
         <script src="assets/vendor/sqljs-1.8.0/sql-wasm.js"></script>
         <script src="assets/vendor/localForage-1.10.0/localforage.min.js"></script>
         <script src="assets/vendor/leaflet-1.9.4/leaflet.js"></script>
@@ -54,17 +97,18 @@
         <script src="assets/vendor/leaflet-measure/leaflet.measure.js"></script>
         <script src="assets/vendor/csv2geojson-5.1.1/csv2geojson.min.js"></script>
         <script src="assets/vendor/togeojson-0.16.0/togeojson.min.js"></script>
+        <script src="assets/js/config.js"></script>
         <script src="assets/js/app.js"></script>
         <script src="assets/js/awake.js"></script>
         <script>
             //            if ("serviceWorker" in navigator) {
-//                navigator.serviceWorker.register("service-worker.js");
-//            }
+            //                navigator.serviceWorker.register("service-worker.js");
+            //            }
             const registerServiceWorker = async () => {
                 if ("serviceWorker" in navigator) {
                     try {
                         const registration = await navigator.serviceWorker.register("service-worker.js", {
-//                            scope: "/",
+                            //                            scope: "/",
                         });
                         if (registration.installing) {
                             console.log("Service worker installing");
@@ -79,8 +123,8 @@
                 }
             };
             registerServiceWorker();
-            
-//            منو
+
+            //            منو
             let burger = document.getElementById('burger'),
                     nav = document.getElementById('main-nav');
 
@@ -92,6 +136,8 @@
             /* Onload demo - dirty timeout */
             let clickEvent = new Event('click');
 
+
+            var app = {};
 
         </script>
         <noscript>This website requires JavaScript!</noscript>

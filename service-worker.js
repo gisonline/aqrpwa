@@ -6,13 +6,10 @@ workbox.setConfig({
 });
 
 workbox.precaching.precacheAndRoute([
-    {url: 'index.html', revision: '1'},
-    {url: 'main.html', revision: '1'},
     {url: 'manifest.json', revision: '1.3'},
-    {url: 'assets/js/config.js', revision: '1.2'},
-    {url: 'assets/css/app.css', revision: '1.2'},
-    {url: 'assets/js/app.js', revision: '1.5'},
-    {url: 'assets/js/awake.js', revision: '1'},
+    {url: 'assets/vendor/jquery/jquery-3.7.0.min.js', revision: '1.2'},
+    {url: 'assets/vendor/bootstrap-5.3.1/css/bootstrap.rtl.min.css', revision: '5.3.1'},
+    {url: 'assets/vendor/bootstrap-5.3.1/js/bootstrap.bundle.min.js', revision: '5.3.1'},
     {url: 'assets/img/apple-touch-icon.png', revision: '1'},
     {url: 'assets/img/favicon-32x32.png', revision: '1'},
     {url: 'assets/img/favicon-16x16.png', revision: '1'},
@@ -41,6 +38,12 @@ workbox.precaching.precacheAndRoute([
     {url: 'assets/vendor/leaflet-measure/leaflet.measure.js', revision: '2'},
     {url: 'assets/vendor/csv2geojson-5.1.1/csv2geojson.min.js', revision: '03.05.21.1'},
     {url: 'assets/vendor/togeojson-0.16.0/togeojson.min.js', revision: '03.05.21.1'},
+    {url: 'index.html', revision: '1'},
+    {url: 'main.html', revision: '1'},
+    {url: 'assets/js/config.js', revision: '1.2'},
+    {url: 'assets/css/app.css', revision: '1.2'},
+    {url: 'assets/js/app.js', revision: '1.5'},
+    {url: 'assets/js/awake.js', revision: '1'},
 ], {
     // Ignore all URL parameters.
     ignoreURLParametersMatching: [/.*/]
